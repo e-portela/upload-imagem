@@ -1,4 +1,6 @@
 ﻿# Componente de Upload de Imagem
+<img width="592" height="507" alt="image" src="https://github.com/user-attachments/assets/0a16e142-aef2-4378-aaeb-12bb10c21143" />
+
 
 
 Este é um componente de upload de imagem que desenvolvi focando em **simplicidade**, **modernidade** e **experiência real de uso**.
@@ -75,5 +77,6 @@ Totalmente plugável, sem dependências externas.
 
 Este projeto está sob a licença **MIT**.
 Sinta-se livre para usar, editar ou adaptar como quiser.
+
 
 
