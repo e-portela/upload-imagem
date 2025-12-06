@@ -1,0 +1,173 @@
+:root {
+    --borda: #2e2e2e;
+    --fundo-escuro: #0f0f0f;
+    --texto-suave: #b5b5b5;
+    --primaria: #6d4aff;
+    --perigo: #ff4d4d;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background: #111;
+    font-family: sans-serif;
+    color: white;
+}
+
+.caixa-upload {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    background: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.cabecalho h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cabecalho p {
+    margin: 4px 0 16px;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.input-arquivo {
+    display: none;
+}
+
+.area-upload {
+    height: 260px;
+    border: 2px dashed #3a3a3a;
+    border-radius: 12px;
+    background: var(--fundo-escuro);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+    padding: 20px;
+}
+
+.area-upload.arrastando {
+    border-color: var(--primaria);
+    background: #1a1a1a;
+}
+
+.icone-upload {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--borda);
+}
+
+.icone-upload svg {
+    width: 26px;
+    height: 26px;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.texto-upload {
+    text-align: center;
+}
+
+.texto-upload .titulo {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.texto-upload .subtitulo {
+    font-size: 12px;
+    color: #9c9c9c;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.imagem-preview-container {
+    position: relative;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+}
+
+.imagem-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.imagem-preview-container:hover img {
+    transform: scale(1.05);
+}
+
+.overlay-preview {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.imagem-preview-container:hover .overlay-preview {
+    opacity: 1;
+}
+
+.botao {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.botao-substituir {
+    background: #ededed;
+}
+
+.botao-remover {
+    background: var(--perigo);
+    color: white;
+}
+
+.info-arquivo {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #c4c4c4;
+    gap: 8px;
+}
+
+.botao-remover-pequeno {
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+    color: white;
+}
+
+.botao-remover-pequeno:hover {
+    background: #2a2a2a;
+}

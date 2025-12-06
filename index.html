@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload de Imagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="caixa-upload">
+    <div class="cabecalho">
+        <h3>Upload de Imagem</h3>
+        <p>Formatos suportados: JPG, PNG, GIF</p>
+    </div>
+
+    <input type="file" id="arquivoInput" accept="image/*" class="input-arquivo" />
+
+    <!-- Área inicial -->
+    <div id="areaUpload" class="area-upload">
+        <div class="icone-upload">
+            <svg viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="4" stroke="white"></rect>
+                <path d="M12 8v8M8 12h8" stroke-linecap="round" stroke="white"></path>
+            </svg>
+        </div>
+
+        <div class="texto-upload">
+            <p class="titulo">Clique para selecionar</p>
+            <p class="subtitulo">ou arraste e solte aqui</p>
+        </div>
+    </div>
+
+    <!-- Visualização -->
+    <div id="previewContainer" class="oculto">
+        <div class="imagem-preview-container">
+            <img id="imagemPreview" src="" alt="Prévia da imagem" />
+
+            <div class="overlay-preview">
+                <button id="botaoSubstituir" class="botao botao-substituir">⟳</button>
+                <button id="botaoRemover" class="botao botao-remover">🗑</button>
+            </div>
+        </div>
+
+        <div class="info-arquivo">
+            <span id="nomeArquivo"></span>
+            <button id="botaoRemoverPequeno" class="botao-remover-pequeno">✕</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
